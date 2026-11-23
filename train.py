@@ -36,7 +36,7 @@ X_train,X_test,Y_train,Y_test=train_test_split(
 print("\nTraining samples:",X_train.shape[0])
 print("Testing samples:",X_test.shape[0])
 models={
-  "Logostic Regression":LogisticRegression(
+  "Logistic Regression":LogisticRegression(
     max_iter=5000
   ),
   "KNN":KNeighborsClassifier(),

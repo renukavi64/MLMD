@@ -85,7 +85,7 @@ for model_name,model in models.items():
   grid_search=GridSearchCV(
     estimator=pipeline,
     param_grid=param_grids[model_name],
-    scoring="f1"
+    scoring="f1",
     cv=5,
   n_jobs=-1
   )

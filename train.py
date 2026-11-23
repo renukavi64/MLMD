@@ -54,7 +54,7 @@ param_grids={
     "model_ _solver":["liblinear"]
   },
   "KNN":{
-    "model_ _n_neighbors":[3,5,7,9]'
+    "model_ _n_neighbors":[3,5,7,9],
     "model_ _weights":["uniform","distance"]
   },
   "Decision Tree":{

@@ -136,7 +136,7 @@ for model_name,model in models.items():
   )
   print("\nConfusion Matrix:")
   print(confusion_matrix(Y_test,Y_pred))
-  joblib.dump(best_model,"bset_model,"best_model.joblib")
+  joblib.dump(best_model,"best_model.joblib")
   print("\nBest model saved successfully!")
   print("Model:",best_model_name)
   

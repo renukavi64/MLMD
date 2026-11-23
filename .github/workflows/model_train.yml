@@ -12,7 +12,7 @@ jobs :
      uses : actions/checkout@v4
    - name : Check Repository Files
      run : |
-      echo"Current directory :"
+      echo "Current directory :"
       pwd
       echo "Files in repository root :"
       ls -la

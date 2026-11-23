@@ -75,7 +75,7 @@ param_grids={
 results=[]
 best_models={}
 for model_name,model in models.items():
-  print("\n" + "=" * 60)
+  print("\n" + "="*60)
   print("Running:",model_name)
   print("="*60)
   pipeline=Pipeline([
@@ -89,16 +89,16 @@ for model_name,model in models.items():
     cv=5,
   n_jobs=-1
   )
-  grid_search.fit(X_train.Y_train)
+  grid_search.fit(X_train,Y_train)
   best_models[model_name]=grid_search.best_estimator_
   results.append({
     "Model":model_name,
     "Best F1 Score":grid_search.best_score_,
-    "Best Parameter":grid_search.best_params_
+    "Best Parameters":grid_search.best_params_
   })
   print("Best F1 Score:",
-        round(grids_search.best_score_,4))
-  print("Best Parameter:",
+        round(grid_search.best_score_,4))
+  print("Best Parameters:",
         grid_search.best_params_)
   results_df=pd.DataFrame(results)
   results_df=results_df.sort_values(
@@ -120,7 +120,7 @@ for model_name,model in models.items():
   print(best_model_name)
   print("\nBest CV F1-Score:")
   print(round(best_cv_f1,4))
-  Y_ored=best_model.predict(X_test)
+  Y_pred=best_model.predict(X_test)
   print("\n"+"="*60)
   print("FINAL MODEL EVALUATION")
   print("="*60)
